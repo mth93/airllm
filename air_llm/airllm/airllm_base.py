@@ -92,6 +92,7 @@ class AirLLMBaseModel(GenerationMixin):
         self.total_compression_overhead_time = None
         self._supports_cache_class = False
         self.hf_quantizer = None
+        self.is_stateful = None
 
         if compression is not None:
             if not bitsandbytes_installed:
