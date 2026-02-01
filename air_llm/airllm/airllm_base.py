@@ -570,8 +570,7 @@ class AirLLMBaseModel(GenerationMixin):
                                 print("seq:%s"%(seq))
                                 print("Kwargs:%s"%(kwargs))
                                 
-                                new_seq = layer(seq, **kwargs)
-                                print("new_seq:%s"%(new_seq))
+                                new_seq = layer(seq, **kwargs)[0]
                             else:
 
                                 kwargs = {'use_cache': True,
