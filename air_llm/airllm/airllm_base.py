@@ -567,7 +567,9 @@ class AirLLMBaseModel(GenerationMixin):
                                           }
                                 kwargs = {**kwargs, **pos_embed_args, **attention_mask_args, **position_ids_args}
 
-
+                                print("seq:%s"%(seq))
+                                print("Kwargs:%s"%(kwargs))
+                                
                                 new_seq = layer(seq, **kwargs)[0]
                             else:
 
